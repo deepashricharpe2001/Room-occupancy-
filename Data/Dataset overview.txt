@@ -1,0 +1,51 @@
+1. dim_date.csv:
+
+    date: The specific date.
+    mmm yy: The month and year (e.g., "May 22").
+    week no: The week number in the year (e.g., "W 19" indicates the 19th week).
+    day_type: Indicates whether the day is a "weekend" or a "weekday".
+
+Use: This file provides date-related information, allowing for the analysis of trends across different dates, weeks, and day types.
+
+2. dim_hotels.csv:
+
+    property_id: Unique identifier for each hotel.
+    property_name: Name of the hotel.
+    category: The category of the hotel (e.g., "Luxury", "Business").
+    city: The city where the hotel is located.
+
+Use: This file provides details about the hotels, which can be used to link bookings to specific hotels and analyze performance across different categories and cities.
+
+3. dim_rooms.csv:
+
+    room_id: Unique identifier for each room type.
+    room_class: The classification of the room (e.g., "Standard", "Elite").
+
+Use: This file defines the different room categories available in the hotels, allowing for an analysis of bookings by room type.
+
+4. fact_aggregated_bookings.csv:
+
+    property_id: The hotel identifier.
+    check_in_date: The date when the guests check in.
+    room_category: The room type.
+    successful_bookings: Number of successful bookings for that room type on that date.
+    capacity: Maximum capacity for that room type on that date.
+
+Use: This file provides aggregated booking data, useful for calculating metrics like occupancy rate.
+
+5. fact_bookings.csv:
+
+    booking_id: Unique identifier for each booking.
+    property_id: The hotel identifier.
+    booking_date: Date when the booking was made.
+    check_in_date: Date when the guests check in.
+    checkout_date: Date when the guests check out.
+    no_guests: Number of guests in the booking.
+    room_category: The room type booked.
+    booking_platform: Platform through which the booking was made (e.g., "direct online", "logtrip").
+    ratings_given: Customer rating for the booking.
+    booking_status: Status of the booking (e.g., "Checked Out", "Cancelled").
+    revenue_generated: Total revenue from the booking.
+    revenue_realized: Revenue actually realized after cancellations and other factors.
+
+Use: This file provides detailed booking-level data, essential for understanding customer behavior and calculating derived metrics.
